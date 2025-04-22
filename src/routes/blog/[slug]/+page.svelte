@@ -16,7 +16,7 @@
     description: post.description ?? post.title,
     url: `/blog/${post.slug}`,
     siteName: blogMetaData.blogTitle,
-    author: blogMetaData.blogTitle,
+    author: blogMetaData.owner,
     image: {
       url: `${envVariables.basePath}/background.jpeg`,
       width: 1000,

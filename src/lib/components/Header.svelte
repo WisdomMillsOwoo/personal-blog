@@ -3,7 +3,10 @@
 </script>
 
 <nav class="header">
-  <a href="/" class="header__title">{blogMetaData.blogTitle}</a>
+  <a href="/" class="header__title">
+    <img src="/header_logo.png" alt="logo" class="header__logo" />
+    {blogMetaData.blogTitle}
+  </a>
   <ul class="header__links">
     <li class="header__links_item">
       <a href="/" class="header__links__item__link">Home</a>
@@ -27,7 +30,7 @@
     color: var(--main-color);
     text-decoration: none;
     font-weight: bold;
-    font-size: 1.5rem;
+    font-size: 2rem;
     line-height: 6.2rem;
   }
 

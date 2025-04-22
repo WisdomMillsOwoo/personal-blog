@@ -3,8 +3,8 @@
 @import 'highlight.js/styles/github.css';
 
 :root {
-  --main-color: #333;
-  --secondary-color: #6A7281;
+  --main-color: rgb(239, 131, 84);
+  --secondary-color: #4f5d75;
   --link-color: #0076df;
   --border-color: #e5e7eb;
   font-size: 16px;

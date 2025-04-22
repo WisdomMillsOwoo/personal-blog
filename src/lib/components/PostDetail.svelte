@@ -12,7 +12,7 @@
         {format(new Date(post.date), "MMMM DD, YYYY")},
       </span>
 
-      <a class="post-detail__top__info__author" href="/about">by Yourname</a>
+      <a class="post-detail__top__info__author" href="/about">by Wisdom Mills-Owoo</a>
     </div>
   </div>
   <div class="post-detail__content">
@@ -34,6 +34,7 @@
   .post-detail__top__title {
     padding-bottom: 2rem;
     margin: 0;
+    color: var(--main-color);
   }
 
   .post-detail__top__info {
