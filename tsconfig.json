@@ -1,6 +1,8 @@
 {
 	"extends": "./.svelte-kit/tsconfig.json",
 	"compilerOptions": {
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
 		"paths": {
 			"$data": ["src/data"],
 			"$data/*": ["src/data/*"],
