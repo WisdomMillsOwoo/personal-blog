@@ -1,9 +1,7 @@
 import preprocess from "svelte-preprocess";
 import adapter from "@sveltejs/adapter-auto";
 import { resolve } from "path";
-import process from "node:process";
 
-process.env.PORT = "5173";
 const config = {
   // Consult https://github.com/sveltejs/svelte-preprocess
   // for more information about preprocessors
