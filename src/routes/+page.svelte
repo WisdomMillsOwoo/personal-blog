@@ -45,7 +45,7 @@
 <div class="home-container">
   <div class="hero-section">
     <h1 class="hero-title">Welcome to JustWisdomThings</h1>
-    <p class="hero-subtitle">Software Engineer • Content Creator • Lifelong Learner</p>
+    <p class="hero-subtitle">Software Engineering - Music - Video - Tech</p>
   </div>
 
   <div class="navigation-grid">
