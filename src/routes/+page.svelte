@@ -1,10 +1,7 @@
 <script lang="ts">
-  export let data;
   import { envVariables } from "$lib/envVariables";
   import { blogMetaData } from "$lib/blogMetaData";
   import { MetaTags } from "svelte-meta-tags";
-  import PostList from "$lib/components/PostList.svelte";
-  import PostItem from "$lib/components/Post.svelte";
 
   const meta = {
     title: `Home | ${blogMetaData.blogTitle}`,
@@ -45,8 +42,165 @@
   }}
 />
 
-<PostList>
-  {#each data.body.posts as post}
-    <PostItem {post} />
-  {/each}
-</PostList>
+<div class="home-container">
+  <div class="hero-section">
+    <h1 class="hero-title">Welcome to JustWisdomThings</h1>
+    <p class="hero-subtitle">Software Engineer • Content Creator • Lifelong Learner</p>
+  </div>
+
+  <div class="navigation-grid">
+    <a href="https://www.youtube.com/@justwisdomthings" target="_blank" rel="noopener noreferrer" class="nav-card youtube-card">
+      <div class="nav-card-icon">📺</div>
+      <h2 class="nav-card-title">YouTube Videos</h2>
+      <p class="nav-card-description">Watch my latest tech tutorials, coding tips, and developer insights</p>
+      <div class="nav-card-arrow">→</div>
+    </a>
+
+    <a href="https://github.com/WisdomMillsOwoo" target="_blank" rel="noopener noreferrer" class="nav-card github-card">
+      <div class="nav-card-icon">💻</div>
+      <h2 class="nav-card-title">GitHub Projects</h2>
+      <p class="nav-card-description">Explore my open source projects and code repositories</p>
+      <div class="nav-card-arrow">→</div>
+    </a>
+
+    <a href="/blog" class="nav-card blog-card">
+      <div class="nav-card-icon">✍️</div>
+      <h2 class="nav-card-title">Blog Posts</h2>
+      <p class="nav-card-description">Read my thoughts on software development, music, and life</p>
+      <div class="nav-card-arrow">→</div>
+    </a>
+  </div>
+</div>
+
+<style>
+  .home-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+  }
+
+  .hero-section {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+    line-height: 1.2;
+  }
+
+  .hero-subtitle {
+    font-size: 1.25rem;
+    color: var(--secondary-color);
+    margin: 0;
+  }
+
+  .navigation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .nav-card {
+    display: block;
+    padding: 2.5rem;
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+    position: relative;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-color: var(--main-color);
+  }
+
+  .nav-card-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  .nav-card-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: var(--main-color);
+  }
+
+  .nav-card-description {
+    color: var(--secondary-color);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+  }
+
+  .nav-card-arrow {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    font-size: 1.5rem;
+    color: var(--main-color);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+  }
+
+  .nav-card:hover .nav-card-arrow {
+    opacity: 1;
+    transform: translateX(4px);
+  }
+
+  .youtube-card:hover {
+    border-color: #ff0000;
+  }
+
+  .youtube-card:hover .nav-card-title,
+  .youtube-card:hover .nav-card-arrow {
+    color: #ff0000;
+  }
+
+  .github-card:hover {
+    border-color: #333;
+  }
+
+  .github-card:hover .nav-card-title,
+  .github-card:hover .nav-card-arrow {
+    color: #333;
+  }
+
+  .blog-card:hover {
+    border-color: var(--main-color);
+  }
+
+  @media (max-width: 768px) {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1rem;
+    }
+
+    .navigation-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .nav-card {
+      padding: 2rem;
+    }
+
+    .nav-card-arrow {
+      top: 1.5rem;
+      right: 1.5rem;
+    }
+  }
+</style>

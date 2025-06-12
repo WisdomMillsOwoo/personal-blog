@@ -1,5 +1,4 @@
-import { data } from "$data/posts.json";
-
+// Remove the data loading since we don't need posts on the home page anymore
 export function load() {
-  return { body: { posts: data } };
+  return {};
 }
