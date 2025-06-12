@@ -100,7 +100,7 @@
 
   .navigation-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 2rem;
     margin-top: 3rem;
   }
@@ -116,6 +116,7 @@
     position: relative;
     background: white;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    min-height: 200px;
   }
 
   .nav-card:hover {
@@ -180,6 +181,7 @@
     border-color: var(--main-color);
   }
 
+  /* Responsive adjustments while keeping cards in line */
   @media (max-width: 768px) {
     .hero-title {
       font-size: 2rem;
@@ -190,17 +192,64 @@
     }
 
     .navigation-grid {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
+      gap: 1rem;
     }
 
     .nav-card {
-      padding: 2rem;
+      padding: 1.5rem;
+      min-height: 160px;
+    }
+
+    .nav-card-icon {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .nav-card-title {
+      font-size: 1.1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .nav-card-description {
+      font-size: 0.85rem;
+      line-height: 1.4;
     }
 
     .nav-card-arrow {
-      top: 1.5rem;
-      right: 1.5rem;
+      top: 1rem;
+      right: 1rem;
+      font-size: 1.2rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .home-container {
+      padding: 1rem 0.5rem;
+    }
+
+    .navigation-grid {
+      gap: 0.5rem;
+    }
+
+    .nav-card {
+      padding: 1rem;
+      min-height: 140px;
+    }
+
+    .nav-card-icon {
+      font-size: 1.5rem;
+    }
+
+    .nav-card-title {
+      font-size: 1rem;
+    }
+
+    .nav-card-description {
+      font-size: 0.8rem;
+    }
+
+    .nav-card-arrow {
+      font-size: 1rem;
     }
   }
 </style>
